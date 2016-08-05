@@ -175,10 +175,19 @@ a[href^="https://maps.google.com/maps"] {
           font-size: 12px;
           text-decoration: none;
           transition: all 300ms ease;
+          cursor: pointer;
 
           &:hover {
             color: #5054e9;
           }
+        }
+      }
+
+      &--active {
+        .item {
+          opacity: 1;
+          margin-left: 40px;
+          visibility: visible;
         }
       }
 
@@ -418,6 +427,7 @@ a[href^="https://maps.google.com/maps"] {
 				display: inline-block;
 				border: none;
 				outline: none;
+        cursor: pointer;
 
 				span {
 					color: #292933;
@@ -476,6 +486,9 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .works {
+  background: url('../img/project_1.png') no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &-wrapper {
     margin: 0 auto;
@@ -485,12 +498,46 @@ a[href^="https://maps.google.com/maps"] {
   &-item {
     max-width: 550px;
 
+    &__wrapper {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: all 500ms ease;
+    }
+
+    &--active {
+      margin-bottom: 51px;
+      margin-top: 33px;
+
+      &.works-item .title {
+        font-size: 48px;
+        opacity: 1;
+
+        &:hover {
+          margin-left: 0;
+        }
+      }
+
+      .works-item__wrapper {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+      }
+    }
+
     .title {
-      font-size: 48px;
+      font-size: 36px;
       font-family: 'extrabold';
-      font-size: 48px;
+      opacity: 0.5;
       color: #292933;
       margin: 0 0 18px 0;
+      line-height: 48px;
+      cursor: pointer;
+      transition: all 500ms ease;
+
+      &:hover {
+        margin: 0 0 18px 35px;
+      }
     }
 
     .description {
@@ -521,12 +568,13 @@ a[href^="https://maps.google.com/maps"] {
       text-transform: uppercase;
       text-decoration: none;
       margin-top: 16px;
+      cursor: pointer;
+
+      &:hover {
+        .arrow {
+          margin-left: 25px;
+        }
+      }
     }
   }
-}
-
-.project_1 {
-  background: url('../img/project_1.png') no-repeat;
-  background-position: center;
-  background-size: cover;
 }

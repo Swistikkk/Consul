@@ -37,18 +37,42 @@ $(document).ready(function(){
 
   function hoverItem() {
     let work = document.querySelector('.works');
-    console.log(work);
     let elements = document.querySelectorAll('.works-item');
+    console.log(work.style);
 
-    elements[0].addEventListener('mouseover', function(){
-      work.classList.add('project_1');
-    });
-    elements[0].addEventListener('mouseout', function(){
-      work.classList.remove('project_1');
-    });
+    for(let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', function(e){
+        work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
+        var that = this;
 
+        function checkAccardeon(){
+          for(let b = 0; b < elements.length; b++) {
+            if(elements[b].classList == "works-item works-item--active" && elements[b] != e.currentTarget) {
+              elements[b].classList.remove('works-item--active');
+            }
+          }
+
+          that.classList.add('works-item--active');
+        }
+
+        checkAccardeon();
+      });
+    }
+  };
+
+  function hoverLogo() {
+    let logo = document.querySelector('.logo');
+    let topMenu = document.querySelector('.top-menu');
+
+    logo.addEventListener('mouseover', function(){
+      topMenu.classList.add('top-menu-list--active');
+    });
+    logo.addEventListener('mouseout', function(){
+      topMenu.classList.remove('top-menu-list--active');
+    });
   }
 
+  hoverLogo();
   createMap();
   hoverItem();
 
