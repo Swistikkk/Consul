@@ -1,8 +1,52 @@
 $(document).ready(function(){
 
+  let mainPopup = document.querySelector('.main-popup');
+  let button = document.querySelector('.button');
+  let fullPage = document.getElementById('fullpage');
+
   $('#fullpage').fullpage({
     anchors: ['main', 'services', 'works', 'contacts'],
-    menu: '#top-menu'
+    menu: '#top-menu',
+
+    onLeave: function(index, nextIndex, direction){
+        var leavingSection = $(this);
+        if(index == 1 && direction =='down'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+        else if (index == 2 && direction =='up'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+        else if (index == 2 && direction =='down'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+        else if (index == 3 && direction =='up'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+        else if (index == 3 && direction =='down'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+        else if (index == 4 && direction =='up'){
+          mainPopup.classList.remove('main-popup--active');
+          fullPage.classList.remove('fullpage');
+          $('.main-header .button').show();
+        }
+
+    }
   });
 
   function createMap() {
@@ -163,6 +207,26 @@ $(document).ready(function(){
     });
   }
 
+  function activePopup() {
+    let mainPopup = document.querySelector('.main-popup');
+    let button = document.querySelector('.button');
+    let fullPage = document.getElementById('fullpage');
+
+    button.addEventListener('click', function(){
+      mainPopup.classList.add('main-popup--active');
+      fullPage.classList.add('fullpage');
+      document.body.classList.add('bg-color');
+      $('.main-header .button').hide();
+    })
+
+    $('.main-popup-close').on('click', function(){
+      mainPopup.classList.remove('main-popup--active');
+      fullPage.classList.remove('fullpage');
+      $('.main-header .button').show();
+    });
+  }
+
+  activePopup();
   viewVideos();
   hoverLogo();
   createMap();

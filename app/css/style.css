@@ -20,6 +20,9 @@
 body {
   position: relative; }
 
+.bg-color {
+  background: #2b2b33; }
+
 a[href^="http://maps.google.com/maps"] {
   display: none !important; }
 
@@ -31,6 +34,12 @@ a[href^="https://maps.google.com/maps"] {
 
 .gmnoprint div {
   background: none !important; }
+
+.fullpage {
+  border-radius: 4px;
+  transform: translate(-190px, -10px) scale(0.6, 0.6) !important;
+  opacity: 0.5;
+  pointer-events: none; }
 
 .main-section {
   position: relative;
@@ -312,85 +321,84 @@ a[href^="https://maps.google.com/maps"] {
 .fp-viewing-contacts .top-menu-list .item-link {
   color: #2b2b33; }
 
-.services-title {
-  font-size: 36px;
-  margin-bottom: 11px;
-  margin: 0;
-  font-family: 'extrabold';
-  color: #292933;
-  margin-bottom: 18px;
-  line-height: 48px;
-  max-width: 560px; }
-
-.services-description {
-  margin: 0;
-  display: inline-block;
-  font-family: 'bold';
-  font-size: 16px;
-  color: #292933;
-  line-height: 25px;
-  max-width: 600px; }
-
-.services .wrapper {
-  position: relative;
-  height: auto; }
-
-.services .what-we-do {
-  margin-top: 33px; }
-  .services .what-we-do .item {
+.services {
+  background-color: #fff; }
+  .services-title {
+    font-size: 36px;
+    margin-bottom: 11px;
+    margin: 0;
+    font-family: 'extrabold';
+    color: #292933;
+    margin-bottom: 18px;
+    line-height: 48px;
+    max-width: 560px; }
+  .services-description {
+    margin: 0;
     display: inline-block;
-    width: 295px;
-    height: 360px;
-    border-radius: 4px;
+    font-family: 'bold';
+    font-size: 16px;
+    color: #292933;
+    line-height: 25px;
+    max-width: 600px; }
+  .services .wrapper {
     position: relative;
-    vertical-align: top;
-    overflow: hidden;
-    margin-right: 1px; }
-    .services .what-we-do .item:hover {
-      cursor: pointer; }
-    .services .what-we-do .item-video {
-      position: absolute;
-      top: -1px;
-      left: 0;
-      z-index: -1; }
-      .services .what-we-do .item-video video {
-        width: 100%;
-        border-radius: 6px;
-        left: 0;
-        top: 0; }
-    .services .what-we-do .item-wrapper {
-      padding: 40px 40px 20px 40px;
-      position: relative;
-      z-index: 1; }
-    .services .what-we-do .item-title {
-      font-family: 'extrabold';
-      font-size: 18px;
-      color: #fff;
-      margin: 0 0 10px 0; }
-    .services .what-we-do .item-description {
-      font-size: 14px;
-      line-height: 20px;
-      color: #fff;
-      font-family: 'bold';
-      margin-bottom: 0; }
-    .services .what-we-do .item-action {
-      border-radius: 2px;
-      background: rgba(255, 255, 255, 0.9);
-      width: 100%;
-      height: 30px;
-      margin-top: 168px;
-      text-align: center;
-      z-index: 1;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.315);
+    height: auto; }
+  .services .what-we-do {
+    margin-top: 33px; }
+    .services .what-we-do .item {
       display: inline-block;
-      border: none;
-      outline: none;
-      cursor: pointer; }
-      .services .what-we-do .item-action span {
-        color: #292933;
-        line-height: 30px;
+      width: 295px;
+      height: 360px;
+      border-radius: 4px;
+      position: relative;
+      vertical-align: top;
+      overflow: hidden;
+      margin-right: 1px; }
+      .services .what-we-do .item:hover {
+        cursor: pointer; }
+      .services .what-we-do .item-video {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        z-index: 0; }
+        .services .what-we-do .item-video video {
+          width: 100%;
+          border-radius: 6px;
+          left: 0;
+          top: 0; }
+      .services .what-we-do .item-wrapper {
+        padding: 40px 40px 20px 40px;
+        position: relative;
+        z-index: 1; }
+      .services .what-we-do .item-title {
         font-family: 'extrabold';
-        font-size: 14px; }
+        font-size: 18px;
+        color: #fff;
+        margin: 0 0 10px 0; }
+      .services .what-we-do .item-description {
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        font-family: 'bold';
+        margin-bottom: 0; }
+      .services .what-we-do .item-action {
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 30px;
+        margin-top: 168px;
+        text-align: center;
+        z-index: 1;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.315);
+        display: inline-block;
+        border: none;
+        outline: none;
+        cursor: pointer; }
+        .services .what-we-do .item-action span {
+          color: #292933;
+          line-height: 30px;
+          font-family: 'extrabold';
+          font-size: 14px; }
 
 .contacts {
   background: url("../img/contacts.png") no-repeat;
@@ -601,6 +609,140 @@ a[href^="https://maps.google.com/maps"] {
 
 .color_project_4 .works-item .arrow {
   background: url("../img/arrow_right_w.svg") no-repeat; }
+
+.main-popup {
+  display: inline-block;
+  top: 17.5%;
+  position: absolute;
+  width: 30%;
+  z-index: 2;
+  right: 0;
+  font-size: 0;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden; }
+  .main-popup--active {
+    opacity: 1;
+    visibility: visible; }
+  .main-popup-title {
+    display: inline-block;
+    transition: all 300ms ease;
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-family: 'extrabold';
+    font-size: 36px; }
+  .main-popup-button {
+    outline: none;
+    display: inline-block;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    padding: 12 28 12 28;
+    font-family: 'extrabold';
+    vertical-align: top;
+    width: calc(100% - 50px);
+    height: 50px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.9); }
+    .main-popup-button:hover {
+      background-color: #5054e9;
+      border: 2px solid #5054e9; }
+      .main-popup-button:hover span {
+        color: #fff; }
+    .main-popup-button span {
+      color: #292933;
+      font-family: 'extrabold';
+      font-size: 12px;
+      letter-spacing: 1px;
+      display: inline-block;
+      text-transform: uppercase; }
+  .main-popup-close {
+    margin-top: 2px;
+    float: right;
+    margin-right: 50px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all 300ms ease; }
+    .main-popup-close:hover {
+      transform: rotate(90deg); }
+    .main-popup-close .line-1 {
+      margin-top: 13px;
+      margin-left: 6px;
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: rotate(45deg); }
+    .main-popup-close .line-2 {
+      margin-top: 13px;
+      margin-left: 6px;
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: rotate(135deg); }
+  .main-popup-form input {
+    transition: all 300ms ease;
+    font-size: 14px;
+    font-family: 'bold';
+    width: calc(100% - 50px);
+    height: 50px;
+    outline: none;
+    color: #fff;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius: 0px;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: top;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin-bottom: 15px; }
+    .main-popup-form input:focus {
+      border: 2px solid white;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0; }
+  .main-popup-form textarea {
+    resize: none;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: 'bold';
+    width: calc(100% - 54px);
+    height: 40px;
+    outline: none;
+    color: #fff;
+    transition: all 300ms ease;
+    border-radius: 0px;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: top;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; }
+    .main-popup-form textarea:focus {
+      border: 2px solid white;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      height: 100px; }
 
 html {
   font-family: sans-serif;

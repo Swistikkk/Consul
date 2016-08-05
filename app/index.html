@@ -48,6 +48,23 @@
     </div>
   </header>
 
+  <div class="main-popup">
+    <h2 class="main-popup-title">Напишите нам</h2>
+    <div class="main-popup-close">
+      <div class="line-1"></div>
+      <div class="line-2"></div>
+    </div>
+
+    <form method="post" action="contact-from-handler.php" class="main-popup-form">
+      <input type="text" name="name" class="js-name" placeholder="Имя">
+      <input type="text" class="js-number" name="phone" placeholder="Телефон">
+      <textarea name="message" rows="4" cols="4" placeholder="Сообщение"></textarea>
+      <button class="main-popup-button js-submit" type="submit">
+        <span>Отправить заявку</span>
+      </button>
+    </form>
+  </div>
+
   <div id="fullpage">
     <div class="section main-section">
 

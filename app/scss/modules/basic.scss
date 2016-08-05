@@ -21,6 +21,10 @@ body {
   position: relative;
 }
 
+.bg-color {
+  background: #2b2b33;
+}
+
 // стили для карты
 a[href^="http://maps.google.com/maps"] {
   display:none !important
@@ -34,6 +38,13 @@ a[href^="https://maps.google.com/maps"] {
 }
 .gmnoprint div {
   background:none !important;
+}
+
+.fullpage {
+  border-radius: 4px;
+  transform: translate(-190px, -10px) scale(0.6, 0.6) !important;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 
@@ -335,6 +346,7 @@ a[href^="https://maps.google.com/maps"] {
 @include fn-viewing(contacts, #2b2b33);
 
 .services {
+  background-color: #fff;
 
   &-title {
     font-size: 36px;
@@ -383,7 +395,7 @@ a[href^="https://maps.google.com/maps"] {
 				position: absolute;
 				top: -1px;
 				left: 0;
-				z-index: -1;
+				z-index: 0;
 
 				video {
 					width: 100%;
@@ -655,7 +667,7 @@ a[href^="https://maps.google.com/maps"] {
     background-size: cover !important;
 
 
-  
+
 
     .works-item {
       .title {
@@ -795,6 +807,170 @@ a[href^="https://maps.google.com/maps"] {
 
       .arrow {
         background: url('../img/arrow_right_w.svg') no-repeat;
+      }
+    }
+  }
+}
+
+.main-popup {
+  display: inline-block;
+  top: 17.5%;
+  position: absolute;
+  width: 30%;
+  z-index: 2;
+  right: 0;
+  font-size: 0;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-title {
+    display: inline-block;
+    transition: all 300ms ease;
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-family: 'extrabold';
+    font-size: 36px;
+  }
+
+  &-button {
+    outline: none;
+    display: inline-block;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    padding: 12 28 12 28;
+    font-family: 'extrabold';
+    vertical-align: top;
+    width: calc(100% - 50px);
+    height: 50px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      background-color: #5054e9;
+      border: 2px solid #5054e9;
+      span {
+        color: #fff;
+      }
+    }
+
+    span {
+      color: #292933;
+      font-family: 'extrabold';
+      font-size: 12px;
+      letter-spacing: 1px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+
+  &-close {
+    margin-top: 2px;
+    float: right;
+    margin-right: 50px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+
+    .line-1 {
+      margin-top: 13px;
+      margin-left: 6px;
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: rotate(45deg)
+    }
+
+    .line-2 {
+      margin-top: 13px;
+      margin-left: 6px;
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transform: rotate(135deg);
+    }
+  }
+
+  &-form {
+    input {
+      transition: all 300ms ease;
+      font-size: 14px;
+      font-family: 'bold';
+      width: calc(100% - 50px);
+      height: 50px;
+      outline: none;
+      color: #fff;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+      border-radius: 0px;
+      border: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: top;
+      background: none;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      margin-bottom: 15px;
+
+      &:focus {
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+      }
+    }
+
+    textarea {
+      resize: none;
+      margin-top: 15px;
+      font-size: 14px;
+      font-family: 'bold';
+      width: calc(100% - 54px);
+      height: 40px;
+      outline: none;
+      color: #fff;
+      transition: all 300ms ease;
+      border-radius: 0px;
+      border: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: top;
+      background: none;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+
+      &:focus {
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        height: 100px;
       }
     }
   }
