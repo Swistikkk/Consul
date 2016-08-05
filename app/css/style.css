@@ -91,15 +91,14 @@ a[href^="https://maps.google.com/maps"] {
         margin-left: 31px; }
     .main-header .logo-line-1, .main-header .logo-line-2 {
       position: relative;
-      transition: all 500ms ease;
-      margin-top: 4px; }
+      transition: all 500ms ease; }
     .main-header .logo-line-1-rectangle {
       width: 20px;
       height: 4px;
       background-color: #fff;
       display: inline-block;
       margin-bottom: 5px;
-      margin-right: 5px;
+      margin-right: 1px;
       transition: all 500ms ease; }
     .main-header .logo-line-2-rectangle {
       width: 26px;
@@ -107,7 +106,7 @@ a[href^="https://maps.google.com/maps"] {
       background-color: #fff;
       display: inline-block;
       margin-bottom: 5px;
-      margin-left: 5px;
+      margin-left: 1px;
       transition: all 500ms ease; }
     .main-header .logo-line-consul {
       width: 75px;
@@ -428,13 +427,25 @@ a[href^="https://maps.google.com/maps"] {
 
 .works {
   background: url("../img/project_1.png") no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: cover !important;
+  background-position: center !important; }
   .works-wrapper {
     margin: 0 auto;
     max-width: 1200px; }
   .works-item {
     max-width: 550px; }
+    .works-item:nth-child(1):hover .title {
+      opacity: 1; }
+    .works-item:nth-child(2):hover .work-item .title {
+      color: #fff; }
+    .works-item:nth-child(2):hover .title {
+      color: #fff;
+      opacity: 1; }
+    .works-item:nth-child(3):hover .title {
+      opacity: 1; }
+    .works-item:nth-child(4):hover .title {
+      color: #fff;
+      opacity: 1; }
     .works-item__wrapper {
       opacity: 0;
       visibility: hidden;
@@ -490,6 +501,106 @@ a[href^="https://maps.google.com/maps"] {
       cursor: pointer; }
       .works-item .link:hover .arrow {
         margin-left: 25px; }
+
+.project_1 {
+  background: url("../img/project_1.png") no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important; }
+  .project_1 .works-item .title {
+    color: #292933 !important; }
+  .project_1 .works-item .description {
+    color: #292933 !important; }
+  .project_1 .works-item .link {
+    color: #292933 !important; }
+  .project_1 .works-item .arrow {
+    background: url("../img/arrow_right.svg") no-repeat !important; }
+
+.project_2 {
+  background: url("../img/project_2.png") no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important; }
+  .project_2 .works-item .title {
+    color: #fff !important; }
+  .project_2 .works-item .description {
+    color: #fff !important; }
+  .project_2 .works-item .link {
+    color: #fff !important; }
+  .project_2 .works-item .arrow {
+    background: url("../img/arrow_right_w.svg") no-repeat !important; }
+
+.project_3 {
+  background: url("../img/project_3.png") no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important; }
+  .project_3 .works-item .title {
+    color: #292933 !important; }
+  .project_3 .works-item .description {
+    color: #292933 !important; }
+  .project_3 .works-item .link {
+    color: #292933 !important; }
+  .project_3 .works-item .arrow {
+    background: url("../img/arrow_right.svg") no-repeat !important; }
+
+.project_4 {
+  background: url("../img/project_4.png") no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important; }
+  .project_4 .works-item .title {
+    color: #fff !important; }
+  .project_4 .works-item .description {
+    color: #fff !important; }
+  .project_4 .works-item .link {
+    color: #fff !important; }
+  .project_4 .works-item .arrow {
+    background: url("../img/arrow_right_w.svg") no-repeat !important; }
+
+.color_project_1 .works-item .title {
+  color: #292933; }
+
+.color_project_1 .works-item .description {
+  color: #292933; }
+
+.color_project_1 .works-item .link {
+  color: #292933; }
+
+.color_project_1 .works-item .arrow {
+  background: url("../img/arrow_right.svg") no-repeat; }
+
+.color_project_2 .works-item .title {
+  color: #fff; }
+
+.color_project_2 .works-item .description {
+  color: #fff; }
+
+.color_project_2 .works-item .link {
+  color: #fff; }
+
+.color_project_2 .works-item .arrow {
+  background: url("../img/arrow_right_w.svg") no-repeat; }
+
+.color_project_3 .works-item .title {
+  color: #292933; }
+
+.color_project_3 .works-item .description {
+  color: #292933; }
+
+.color_project_3 .works-item .link {
+  color: #292933; }
+
+.color_project_3 .works-item .arrow {
+  background: url("../img/arrow_right.svg") no-repeat; }
+
+.color_project_4 .works-item .title {
+  color: #fff; }
+
+.color_project_4 .works-item .description {
+  color: #fff; }
+
+.color_project_4 .works-item .link {
+  color: #fff; }
+
+.color_project_4 .works-item .arrow {
+  background: url("../img/arrow_right_w.svg") no-repeat; }
 
 html {
   font-family: sans-serif;

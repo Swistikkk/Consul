@@ -35,15 +35,82 @@ $(document).ready(function(){
     }
   }
 
+  // аккардион
+
   function hoverItem() {
-    let work = document.querySelector('.works');
-    let elements = document.querySelectorAll('.works-item');
-    console.log(work.style);
+    var work = document.querySelector('.works');
+    var elements = document.querySelectorAll('.works-item');
+
+    function hoverElements() {
+      elements[0].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_1');
+        }
+      });
+      elements[0].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_1');
+        }
+      });
+      elements[1].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_2');
+        }
+      });
+      elements[1].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_2');
+        }
+      });
+      elements[2].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_3');
+        }
+      });
+      elements[2].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_3');
+        }
+      });
+      elements[3].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_4');
+        }
+      });
+      elements[3].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_4');
+        }
+      });
+    }
 
     for(let i = 0; i < elements.length; i++) {
       elements[i].addEventListener('click', function(e){
-        work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
         var that = this;
+
+        work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
+
+        function addColorClass() {
+          var className = 'color_project_' + (i + 1);
+          // for(let u = 0; u < work.classList.length; u++) {
+          //   // if(work.classList[u] == className) {
+          //   //   work.classList.remove(className);
+          //   // }
+          // }
+          for(let o = 0; o < work.classList.length; o++) {
+            if(work.classList[o] == 'color_project_1' && work.classList[0] != className) {
+              work.classList.remove('color_project_1');
+            } else if(work.classList[o] == 'color_project_2' && work.classList[0] != className) {
+              work.classList.remove('color_project_2');
+            } else if(work.classList[o] == 'color_project_3' && work.classList[0] != className) {
+              work.classList.remove('color_project_3');
+            } else if(work.classList[o] == 'color_project_4' && work.classList[0] != className) {
+              work.classList.remove('color_project_4');
+            }
+          }
+
+          work.classList.add(className);
+        }
 
         function checkAccardeon(){
           for(let b = 0; b < elements.length; b++) {
@@ -55,10 +122,15 @@ $(document).ready(function(){
           that.classList.add('works-item--active');
         }
 
+        addColorClass();
         checkAccardeon();
       });
     }
+
+    hoverElements();
   };
+
+  // показывание top-menu при наведение на logo
 
   function hoverLogo() {
     let logo = document.querySelector('.logo');
@@ -72,8 +144,27 @@ $(document).ready(function(){
     });
   }
 
+  // проигрывание видео на события мышки
+
+  function viewVideos(){
+    let videos = document.querySelectorAll('video');
+    let item = $('.services .what-we-do .item');
+
+    item.on('mouseover', function(){
+      let video = this.querySelector('video');
+
+      video.play();
+    });
+
+    item.on('mouseout', function(){
+      let video = this.querySelector('video');
+
+      video.pause();
+    });
+  }
+
+  viewVideos();
   hoverLogo();
   createMap();
   hoverItem();
-
 });

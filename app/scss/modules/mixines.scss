@@ -169,4 +169,42 @@ $mobile: 320px;
       }
     }
   }
+
+	@else if $block == castom {
+    .fp-viewing-works {
+      .main-header .button {
+        color: $black;
+        border: 2px solid $black;
+
+        &:hover {
+          border: 2px solid #5054e9;
+          color: #fff;
+        }
+      }
+
+      .logo {
+        &-line {
+          &-1-rectangle, &-2-rectangle {
+            background: $black;
+          }
+
+          &-consul {
+            background: url('../img/consul_w.svg') no-repeat;
+          }
+
+          &-studio {
+            background: url('../img/studio_w.svg') no-repeat;
+          }
+        }
+      }
+
+      .top-menu {
+        &-list {
+          .item-link {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
 }
