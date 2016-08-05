@@ -226,6 +226,13 @@ $(document).ready(function(){
     });
   }
 
+  // Блочив поворот экрана
+  alert(screen.orientation.type);
+
+  screen.orientation.addEventListener("change", function(e) {
+  alert(screen.orientation.type + " " + screen.orientation.angle);
+  }, false);
+
   activePopup();
   viewVideos();
   hoverLogo();

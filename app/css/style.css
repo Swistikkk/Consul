@@ -55,6 +55,9 @@ a[href^="https://maps.google.com/maps"] {
     position: relative;
     color: #fff;
     max-width: 740px; }
+    @media only screen and (min-width: 321px) and (max-width: 1279px) {
+      .main-section .container {
+        margin-left: 25px; } }
 
 .main-header {
   position: fixed;
@@ -74,6 +77,11 @@ a[href^="https://maps.google.com/maps"] {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%; }
+    @media only screen and (min-width: 321px) and (max-width: 1279px) {
+      .main-header__wrapper {
+        margin: 0 25px;
+        max-width: auto;
+        width: initial; } }
     .main-header__wrapper {
       *zoom: 1; }
     .main-header__wrapper:before, .main-header__wrapper:after {
@@ -209,6 +217,9 @@ a[href^="https://maps.google.com/maps"] {
   bottom: 40px;
   position: absolute;
   cursor: pointer; }
+  @media only screen and (min-width: 321px) and (max-width: 1279px) {
+    .mouse-animation {
+      left: 25px; } }
   .mouse-animation .mouse {
     vertical-align: top;
     width: 20px;
@@ -343,8 +354,21 @@ a[href^="https://maps.google.com/maps"] {
   .services .wrapper {
     position: relative;
     height: auto; }
+    @media only screen and (min-width: 321px) and (max-width: 1279px) {
+      .services .wrapper {
+        margin: 0 25px; } }
   .services .what-we-do {
     margin-top: 33px; }
+    @media only screen and (min-width: 321px) and (max-width: 1279px) {
+      .services .what-we-do {
+        margin-right: 47px; }
+        .services .what-we-do {
+          *zoom: 1; }
+        .services .what-we-do:before, .services .what-we-do:after {
+          content: "";
+          display: table; }
+        .services .what-we-do:after {
+          clear: both; } }
     .services .what-we-do .item {
       display: inline-block;
       width: 295px;
@@ -354,6 +378,18 @@ a[href^="https://maps.google.com/maps"] {
       vertical-align: top;
       overflow: hidden;
       margin-right: 1px; }
+      @media only screen and (min-width: 321px) and (max-width: 1279px) {
+        .services .what-we-do .item {
+          width: 49%;
+          height: 240px; }
+          .services .what-we-do .item:nth-child(1) {
+            margin-bottom: 20px; }
+          .services .what-we-do .item:nth-child(2) {
+            margin-bottom: 20px; }
+          .services .what-we-do .item:nth-child(2n+1) {
+            float: left; }
+          .services .what-we-do .item:nth-child(2n) {
+            float: right; } }
       .services .what-we-do .item:hover {
         cursor: pointer; }
       .services .what-we-do .item-video {
@@ -361,6 +397,9 @@ a[href^="https://maps.google.com/maps"] {
         top: -1px;
         left: 0;
         z-index: 0; }
+        @media only screen and (min-width: 321px) and (max-width: 1279px) {
+          .services .what-we-do .item-video {
+            width: 100%; } }
         .services .what-we-do .item-video video {
           width: 100%;
           border-radius: 6px;
@@ -394,6 +433,9 @@ a[href^="https://maps.google.com/maps"] {
         border: none;
         outline: none;
         cursor: pointer; }
+        @media only screen and (min-width: 321px) and (max-width: 1279px) {
+          .services .what-we-do .item-action {
+            margin-top: 50px; } }
         .services .what-we-do .item-action span {
           color: #292933;
           line-height: 30px;
