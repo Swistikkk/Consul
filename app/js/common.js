@@ -226,16 +226,43 @@ $(document).ready(function(){
     });
   }
 
-  // Блочив поворот экрана
-  alert(screen.orientation.type);
+  function inputMask() {
+    $('.js-number').inputmask("8 (999) 999-99-99");
 
-  screen.orientation.addEventListener("change", function(e) {
-  alert(screen.orientation.type + " " + screen.orientation.angle);
-  }, false);
+    $('form').submit(function (e){
+      let inputs = this.children;
+      let name = inputs[0];
+      let number = inputs[1];
+
+      if(name.value.length < 3) {
+        name.style.borderBottom = "2px solid red";
+        return false;
+      } else {
+        name.style.borderBottom = "";
+      }
+
+      if(number.value.length < 11) {
+        number.style.borderBottom = "2px solid red";
+        return false;
+      }
+    });
+
+    var name = $('.js-name');
+    var number = $('.js-number');
+
+    name.focus(function(){
+      this.style.borderBottom = '';
+    });
+
+    number.focus(function(){
+      this.style.borderBottom = '';
+    });
+  }
 
   activePopup();
   viewVideos();
   hoverLogo();
   createMap();
   hoverItem();
+  inputMask();
 });

@@ -4,12 +4,12 @@ $mobile: 320px;
 
 @mixin adaptive($media) {
 	@if $media == mobile {
-		@media only screen and (max-width: $mobile) {
+		@media only screen and (min-width: $mobile) and (max-width: $pad - 1){
 			@content;
 		}
 	}
 	@else if $media == pad {
-		@media only screen and (min-width: $mobile + 1) and (max-width: $desktop - 1) {
+		@media only screen and (min-width: $pad - 1) and (max-width: $desktop - 1) {
 			@content;
 		}
 	}

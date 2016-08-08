@@ -45,6 +45,10 @@ a[href^="https://maps.google.com/maps"] {
   transform: translate(-190px, -10px) scale(0.6, 0.6) !important;
   opacity: 0.5;
   pointer-events: none;
+
+  @include adaptive(mobile) {
+    left: -20px;
+  }
 }
 
 
@@ -60,6 +64,11 @@ a[href^="https://maps.google.com/maps"] {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+
+    @include adaptive(mobile) {
+      max-width: 320px;
+      margin: 0 15px;
+    }
   }
 
   .container {
@@ -70,6 +79,10 @@ a[href^="https://maps.google.com/maps"] {
 
     @include adaptive(pad) {
       margin-left: 25px;
+    }
+
+    @include adaptive(mobile) {
+      max-width: 285px;
     }
   }
 }
@@ -94,6 +107,10 @@ a[href^="https://maps.google.com/maps"] {
       margin: 0 25px;
       max-width: auto;
       width: initial;
+    }
+
+    @include adaptive(mobile) {
+      margin: 0 15px;
     }
 
     @include clearfix-micro();
@@ -175,6 +192,10 @@ a[href^="https://maps.google.com/maps"] {
     float: left;
     padding-top: 12px;
 
+    @include adaptive(mobile) {
+      display: none;
+    }
+
     &-list {
       margin: 0 0 0 5px;
       padding: 0;
@@ -224,6 +245,10 @@ a[href^="https://maps.google.com/maps"] {
 
   .top-button {
     float: right;
+
+    @include adaptive(mobile) {
+      margin-right: 30px;
+    }
   }
 
   .button {
@@ -240,6 +265,10 @@ a[href^="https://maps.google.com/maps"] {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 300ms ease;
+
+    @include adaptive(mobile) {
+      padding: 12px 14px 14px 12px;
+    }
 
     &:hover {
       background: #5054e9;
@@ -264,6 +293,11 @@ a[href^="https://maps.google.com/maps"] {
   font-size: 48px;
   margin-bottom: 18px;
   line-height: 48px;
+
+  @include adaptive(mobile) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .main-description {
@@ -273,6 +307,11 @@ a[href^="https://maps.google.com/maps"] {
   font-size: 16px;
   color: #fff;
   line-height: 25px;
+
+  @include adaptive(mobile) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .mouse-animation {
@@ -282,6 +321,11 @@ a[href^="https://maps.google.com/maps"] {
 
   @include adaptive(pad) {
     left: 25px;
+    bottom: 140px;
+  }
+
+  @include adaptive(mobile) {
+    left: 15px;
   }
 
   .mouse {
@@ -371,6 +415,10 @@ a[href^="https://maps.google.com/maps"] {
     margin-bottom: 18px;
     line-height: 48px;
     max-width: 560px;
+
+    @include adaptive(mobile) {
+      display: none;
+    }
   }
 
   &-description {
@@ -381,6 +429,10 @@ a[href^="https://maps.google.com/maps"] {
     color: #292933;
     line-height: 25px;
     max-width: 600px;
+
+    @include adaptive(mobile) {
+      display: none;
+    }
   }
 
   .wrapper {
@@ -399,6 +451,10 @@ a[href^="https://maps.google.com/maps"] {
       margin-right: 47px;
 
       @include clearfix-micro();
+    }
+
+    @include adaptive(mobile) {
+      margin-top: 70px;
     }
 
 		.item {
@@ -432,6 +488,12 @@ a[href^="https://maps.google.com/maps"] {
         }
       }
 
+      @include adaptive(mobile) {
+        height: 96px;
+        margin: 0px 12px 10px;
+        width: calc(100% - 25px);
+      }
+
 			&:hover {
 				cursor: pointer;
 			}
@@ -443,6 +505,10 @@ a[href^="https://maps.google.com/maps"] {
 				z-index: 0;
 
         @include adaptive(pad) {
+          width: 100%;
+        }
+
+        @include adaptive(mobile) {
           width: 100%;
         }
 
@@ -458,6 +524,10 @@ a[href^="https://maps.google.com/maps"] {
 				padding: 40px 40px 20px 40px;
 				position: relative;
 				z-index: 1;
+
+        @include adaptive(mobile) {
+          padding: 10px 20px 20px 20px;
+        }
 			}
 
 			&-title {
@@ -465,6 +535,10 @@ a[href^="https://maps.google.com/maps"] {
 				font-size: 18px;
 				color: #fff;
 				margin: 0 0 10px 0;
+
+        @include adaptive(mobile) {
+          font-size: 16px;
+        }
 			}
 
 			&-description {
@@ -473,6 +547,10 @@ a[href^="https://maps.google.com/maps"] {
 				color: #fff;
 				font-family: 'bold';
 				margin-bottom: 0;
+
+        @include adaptive(mobile) {
+          display: none;
+        }
 			}
 
 			&-action {
@@ -491,6 +569,10 @@ a[href^="https://maps.google.com/maps"] {
 
         @include adaptive(pad) {
           margin-top: 50px;
+        }
+
+        @include adaptive(mobile) {
+          margin-top: 0px;
         }
 
 				span {
@@ -514,6 +596,10 @@ a[href^="https://maps.google.com/maps"] {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+
+    @include adaptive(mobile) {
+      margin-top: 95px;
+    }
   }
 
   &-title {
@@ -524,6 +610,11 @@ a[href^="https://maps.google.com/maps"] {
     color: #292933;
     margin-bottom: 18px;
     line-height: 48px;
+
+    @include adaptive(mobile) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &-description {
@@ -534,6 +625,12 @@ a[href^="https://maps.google.com/maps"] {
     display: inline-block;
     margin: 0;
     text-align: center;
+
+    @include adaptive(mobile) {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 230px;
+    }
   }
 
   &-link {
@@ -546,6 +643,10 @@ a[href^="https://maps.google.com/maps"] {
     height: 250px;
     max-width: 500px;
     margin: 20px auto 0;
+
+    @include adaptive(mobile) {
+      max-width: 285px;
+    }
   }
 }
 
@@ -557,10 +658,16 @@ a[href^="https://maps.google.com/maps"] {
   &-wrapper {
     margin: 0 auto;
     max-width: 1200px;
-  }
 
-  .works--white {
+    @include adaptive(pad) {
+      max-width: 768px;
+      margin: 0 25px;
+    }
 
+    @include adaptive(mobile) {
+      max-width: 100%;
+      margin: 0 15px 0;
+    }
   }
 
   &-item {
@@ -620,9 +727,19 @@ a[href^="https://maps.google.com/maps"] {
       margin-bottom: 51px;
       margin-top: 33px;
 
+      @include adaptive(mobile) {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+
       &.works-item .title {
         font-size: 48px;
         opacity: 1;
+
+        @include adaptive(mobile) {
+          font-size: 24px;
+          line-height: 26px;
+        }
 
         &:hover {
           margin-left: 0;
@@ -646,6 +763,11 @@ a[href^="https://maps.google.com/maps"] {
       cursor: pointer;
       transition: all 500ms ease;
 
+      @include adaptive(mobile) {
+        font-size: 24px;
+        line-height: 26px;
+      }
+
       &:hover {
         margin: 0 0 18px 35px;
       }
@@ -658,6 +780,11 @@ a[href^="https://maps.google.com/maps"] {
       font-size: 16px;
       color: #292933;
       line-height: 25px;
+
+      @include adaptive(mobile) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
 
     .arrow {
@@ -877,6 +1004,14 @@ a[href^="https://maps.google.com/maps"] {
   opacity: 0;
   visibility: hidden;
 
+  @include adaptive(pad) {
+    width: 42%;
+  }
+
+  @include adaptive(mobile) {
+    width: 80%;
+  }
+
   &--active {
     opacity: 1;
     visibility: visible;
@@ -938,6 +1073,14 @@ a[href^="https://maps.google.com/maps"] {
     cursor: pointer;
     transition: all 300ms ease;
 
+    @include adaptive(pad) {
+      margin-right: 10px;
+    }
+
+    @include adaptive(mobile) {
+      margin-right: 30px;
+    }
+
     &:hover {
       transform: rotate(90deg);
     }
@@ -989,6 +1132,10 @@ a[href^="https://maps.google.com/maps"] {
       border-top: 0;
       margin-bottom: 15px;
 
+      @include adaptive(mobile) {
+        width: calc(100% - 28px);
+      }
+
       &:focus {
         border: 2px solid rgba(255, 255, 255, 1);
         border-left: 0;
@@ -1017,6 +1164,10 @@ a[href^="https://maps.google.com/maps"] {
       border-left: 0;
       border-right: 0;
       border-top: 0;
+
+      @include adaptive(mobile) {
+        width: calc(100% - 31px);
+      }
 
       &:focus {
         border: 2px solid rgba(255, 255, 255, 1);
