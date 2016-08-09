@@ -82,93 +82,101 @@ $(function(){
 
   // аккардион
 
-  // function hoverItem() {
-  //   var work = document.querySelector('.works');
-  //   var elements = document.querySelectorAll('.works-item');
-  //
-  //   function hoverElements() {
-  //     elements[0].addEventListener('mouseover', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.add('project_1');
-  //       }
-  //     });
-  //     elements[0].addEventListener('mouseout', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.remove('project_1');
-  //       }
-  //     });
-  //     elements[1].addEventListener('mouseover', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.add('project_2');
-  //       }
-  //     });
-  //     elements[1].addEventListener('mouseout', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.remove('project_2');
-  //       }
-  //     });
-  //     elements[2].addEventListener('mouseover', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.add('project_3');
-  //       }
-  //     });
-  //     elements[2].addEventListener('mouseout', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.remove('project_3');
-  //       }
-  //     });
-  //     elements[3].addEventListener('mouseover', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.add('project_4');
-  //       }
-  //     });
-  //     elements[3].addEventListener('mouseout', function(e){
-  //       if(e.currentTarget == this) {
-  //         work.classList.remove('project_4');
-  //       }
-  //     });
-  //   }
-  //
-  //   for(let i = 0; i < elements.length; i++) {
-  //     elements[i].addEventListener('click', function(e){
-  //       var that = this;
-  //
-  //       work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
-  //
-  //       function addColorClass() {
-  //         var className = 'color_project_' + (i + 1);
-  //         for(let o = 0; o < work.classList.length; o++) {
-  //           if(work.classList[o] == 'color_project_1' && work.classList[0] != className) {
-  //             work.classList.remove('color_project_1');
-  //           } else if(work.classList[o] == 'color_project_2' && work.classList[0] != className) {
-  //             work.classList.remove('color_project_2');
-  //           } else if(work.classList[o] == 'color_project_3' && work.classList[0] != className) {
-  //             work.classList.remove('color_project_3');
-  //           } else if(work.classList[o] == 'color_project_4' && work.classList[0] != className) {
-  //             work.classList.remove('color_project_4');
-  //           }
-  //         }
-  //
-  //         work.classList.add(className);
-  //       }
-  //
-  //       function checkAccardeon(){
-  //         for(let b = 0; b < elements.length; b++) {
-  //           if(elements[b].classList == "works-item works-item--active" && elements[b] != e.currentTarget) {
-  //             elements[b].classList.remove('works-item--active');
-  //           }
-  //         }
-  //
-  //         that.classList.add('works-item--active');
-  //       }
-  //
-  //       addColorClass();
-  //       checkAccardeon();
-  //     });
-  //   }
-  //
-  //   hoverElements();
-  // };
+  function hoverItem() {
+    var work = document.querySelector('.works');
+    var elements = document.querySelectorAll('.works-item');
+
+    function hoverElements() {
+      elements[0].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_1');
+        }
+      });
+      elements[0].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_1');
+        }
+      });
+      elements[1].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_2');
+        }
+      });
+      elements[1].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_2');
+        }
+      });
+      elements[2].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_3');
+        }
+      });
+      elements[2].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_3');
+        }
+      });
+      elements[3].addEventListener('mouseover', function(e){
+        if(e.currentTarget == this) {
+          work.classList.add('project_4');
+        }
+      });
+      elements[3].addEventListener('mouseout', function(e){
+        if(e.currentTarget == this) {
+          work.classList.remove('project_4');
+        }
+      });
+    }
+
+    var arrayElements = [];
+
+    for(var k = 0; k < elements.length; k++) {
+      arrayElements.push(elements[k]);
+    }
+
+    for(var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', function(e){
+        var that = this;
+
+        var number = arrayElements.indexOf(this)
+
+        work.style = 'background: url("../img/project_' + (number + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
+
+        function addColorClass() {
+          var className = 'color_project_' + (number + 1);
+          for(var o = 0; o < work.classList.length; o++) {
+            if(work.classList[o] == 'color_project_1' && work.classList[0] != className) {
+              work.classList.remove('color_project_1');
+            } else if(work.classList[o] == 'color_project_2' && work.classList[0] != className) {
+              work.classList.remove('color_project_2');
+            } else if(work.classList[o] == 'color_project_3' && work.classList[0] != className) {
+              work.classList.remove('color_project_3');
+            } else if(work.classList[o] == 'color_project_4' && work.classList[0] != className) {
+              work.classList.remove('color_project_4');
+            }
+          }
+
+          work.classList.add(className);
+        }
+
+        function checkAccardeon(){
+          for(var b = 0; b < elements.length; b++) {
+            if(elements[b].classList == "works-item works-item--active" && elements[b] != e.currentTarget) {
+              elements[b].classList.remove('works-item--active');
+            }
+          }
+
+          that.classList.add('works-item--active');
+        }
+
+        addColorClass();
+        checkAccardeon();
+      });
+    }
+
+    hoverElements();
+  };
 
   // показывание top-menu при наведение на logo
 
@@ -246,15 +254,16 @@ $(function(){
     var nameBlock = $('.js-name');
     var numberBlock = $('.js-number');
 
-    name.focus(function(){
+    nameBlock.focus(function(){
       this.style.borderBottom = '';
     });
 
-    number.focus(function(){
+    numberBlock.focus(function(){
       this.style.borderBottom = '';
     });
   }
 
+  hoverItem();
   activePopup();
   viewVideos();
   hoverLogo();
