@@ -227,7 +227,9 @@ $(function(){
       mainPopup.classList.remove('main-popup--active');
       fullPage.classList.remove('fullpage');
       $('.main-header .button').show();
+      document.body.classList.remove('bg-color');
     });
+
   }
 
   function inputMask() {

@@ -23,6 +23,32 @@ body {
 
 .bg-color {
   background: #2b2b33;
+
+  & .main-header .button {
+    color: #fff !important;
+    border: 2px solid #fff !important;
+
+    &:hover {
+      border: 2px solid #5054e9 !important;
+      color: #fff !important;
+    }
+  }
+
+  & .logo {
+    &-line {
+      &-1-rectangle, &-2-rectangle {
+        background: #fff !important;
+      }
+
+      &-consul {
+        background: url('../img/consul_w.svg') no-repeat !important;
+      }
+
+      &-studio {
+        background: url('../img/studio_w.svg') no-repeat !important;
+      }
+    }
+  }
 }
 
 // стили для карты
