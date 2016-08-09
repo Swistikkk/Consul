@@ -1,8 +1,9 @@
-$(document).ready(function(){
+console.log('hey');
+$(function(){
 
-  let mainPopup = document.querySelector('.main-popup');
-  let button = document.querySelector('.button');
-  let fullPage = document.getElementById('fullpage');
+  var mainPopup = document.querySelector('.main-popup');
+  var button = document.querySelector('.button');
+  var fullPage = document.getElementById('fullpage');
 
   $('#fullpage').fullpage({
     anchors: ['main', 'services', 'works', 'contacts'],
@@ -81,104 +82,99 @@ $(document).ready(function(){
 
   // аккардион
 
-  function hoverItem() {
-    var work = document.querySelector('.works');
-    var elements = document.querySelectorAll('.works-item');
-
-    function hoverElements() {
-      elements[0].addEventListener('mouseover', function(e){
-        if(e.currentTarget == this) {
-          work.classList.add('project_1');
-        }
-      });
-      elements[0].addEventListener('mouseout', function(e){
-        if(e.currentTarget == this) {
-          work.classList.remove('project_1');
-        }
-      });
-      elements[1].addEventListener('mouseover', function(e){
-        if(e.currentTarget == this) {
-          work.classList.add('project_2');
-        }
-      });
-      elements[1].addEventListener('mouseout', function(e){
-        if(e.currentTarget == this) {
-          work.classList.remove('project_2');
-        }
-      });
-      elements[2].addEventListener('mouseover', function(e){
-        if(e.currentTarget == this) {
-          work.classList.add('project_3');
-        }
-      });
-      elements[2].addEventListener('mouseout', function(e){
-        if(e.currentTarget == this) {
-          work.classList.remove('project_3');
-        }
-      });
-      elements[3].addEventListener('mouseover', function(e){
-        if(e.currentTarget == this) {
-          work.classList.add('project_4');
-        }
-      });
-      elements[3].addEventListener('mouseout', function(e){
-        if(e.currentTarget == this) {
-          work.classList.remove('project_4');
-        }
-      });
-    }
-
-    for(let i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', function(e){
-        var that = this;
-
-        work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
-
-        function addColorClass() {
-          var className = 'color_project_' + (i + 1);
-          // for(let u = 0; u < work.classList.length; u++) {
-          //   // if(work.classList[u] == className) {
-          //   //   work.classList.remove(className);
-          //   // }
-          // }
-          for(let o = 0; o < work.classList.length; o++) {
-            if(work.classList[o] == 'color_project_1' && work.classList[0] != className) {
-              work.classList.remove('color_project_1');
-            } else if(work.classList[o] == 'color_project_2' && work.classList[0] != className) {
-              work.classList.remove('color_project_2');
-            } else if(work.classList[o] == 'color_project_3' && work.classList[0] != className) {
-              work.classList.remove('color_project_3');
-            } else if(work.classList[o] == 'color_project_4' && work.classList[0] != className) {
-              work.classList.remove('color_project_4');
-            }
-          }
-
-          work.classList.add(className);
-        }
-
-        function checkAccardeon(){
-          for(let b = 0; b < elements.length; b++) {
-            if(elements[b].classList == "works-item works-item--active" && elements[b] != e.currentTarget) {
-              elements[b].classList.remove('works-item--active');
-            }
-          }
-
-          that.classList.add('works-item--active');
-        }
-
-        addColorClass();
-        checkAccardeon();
-      });
-    }
-
-    hoverElements();
-  };
+  // function hoverItem() {
+  //   var work = document.querySelector('.works');
+  //   var elements = document.querySelectorAll('.works-item');
+  //
+  //   function hoverElements() {
+  //     elements[0].addEventListener('mouseover', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.add('project_1');
+  //       }
+  //     });
+  //     elements[0].addEventListener('mouseout', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.remove('project_1');
+  //       }
+  //     });
+  //     elements[1].addEventListener('mouseover', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.add('project_2');
+  //       }
+  //     });
+  //     elements[1].addEventListener('mouseout', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.remove('project_2');
+  //       }
+  //     });
+  //     elements[2].addEventListener('mouseover', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.add('project_3');
+  //       }
+  //     });
+  //     elements[2].addEventListener('mouseout', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.remove('project_3');
+  //       }
+  //     });
+  //     elements[3].addEventListener('mouseover', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.add('project_4');
+  //       }
+  //     });
+  //     elements[3].addEventListener('mouseout', function(e){
+  //       if(e.currentTarget == this) {
+  //         work.classList.remove('project_4');
+  //       }
+  //     });
+  //   }
+  //
+  //   for(let i = 0; i < elements.length; i++) {
+  //     elements[i].addEventListener('click', function(e){
+  //       var that = this;
+  //
+  //       work.style = 'background: url("../img/project_' + (i + 1) + '.png") no-repeat; background-size: cover; background-position: center;';
+  //
+  //       function addColorClass() {
+  //         var className = 'color_project_' + (i + 1);
+  //         for(let o = 0; o < work.classList.length; o++) {
+  //           if(work.classList[o] == 'color_project_1' && work.classList[0] != className) {
+  //             work.classList.remove('color_project_1');
+  //           } else if(work.classList[o] == 'color_project_2' && work.classList[0] != className) {
+  //             work.classList.remove('color_project_2');
+  //           } else if(work.classList[o] == 'color_project_3' && work.classList[0] != className) {
+  //             work.classList.remove('color_project_3');
+  //           } else if(work.classList[o] == 'color_project_4' && work.classList[0] != className) {
+  //             work.classList.remove('color_project_4');
+  //           }
+  //         }
+  //
+  //         work.classList.add(className);
+  //       }
+  //
+  //       function checkAccardeon(){
+  //         for(let b = 0; b < elements.length; b++) {
+  //           if(elements[b].classList == "works-item works-item--active" && elements[b] != e.currentTarget) {
+  //             elements[b].classList.remove('works-item--active');
+  //           }
+  //         }
+  //
+  //         that.classList.add('works-item--active');
+  //       }
+  //
+  //       addColorClass();
+  //       checkAccardeon();
+  //     });
+  //   }
+  //
+  //   hoverElements();
+  // };
 
   // показывание top-menu при наведение на logo
 
   function hoverLogo() {
-    let logo = document.querySelector('.logo');
-    let topMenu = document.querySelector('.top-menu');
+    var logo = document.querySelector('.logo');
+    var topMenu = document.querySelector('.top-menu');
 
     logo.addEventListener('mouseover', function(){
       topMenu.classList.add('top-menu-list--active');
@@ -191,26 +187,26 @@ $(document).ready(function(){
   // проигрывание видео на события мышки
 
   function viewVideos(){
-    let videos = document.querySelectorAll('video');
-    let item = $('.services .what-we-do .item');
+    var videos = document.querySelectorAll('video');
+    var item = $('.services .what-we-do .item');
 
     item.on('mouseover', function(){
-      let video = this.querySelector('video');
+      var video = this.querySelector('video');
 
       video.play();
     });
 
     item.on('mouseout', function(){
-      let video = this.querySelector('video');
+      var video = this.querySelector('video');
 
       video.pause();
     });
   }
 
   function activePopup() {
-    let mainPopup = document.querySelector('.main-popup');
-    let button = document.querySelector('.button');
-    let fullPage = document.getElementById('fullpage');
+    var mainPopup = document.querySelector('.main-popup');
+    var button = document.querySelector('.button');
+    var fullPage = document.getElementById('fullpage');
 
     button.addEventListener('click', function(){
       mainPopup.classList.add('main-popup--active');
@@ -230,9 +226,9 @@ $(document).ready(function(){
     $('.js-number').inputmask("8 (999) 999-99-99");
 
     $('form').submit(function (e){
-      let inputs = this.children;
-      let name = inputs[0];
-      let number = inputs[1];
+      var inputs = this.children;
+      var name = inputs[0];
+      var number = inputs[1];
 
       if(name.value.length < 3) {
         name.style.borderBottom = "2px solid red";
@@ -247,8 +243,8 @@ $(document).ready(function(){
       }
     });
 
-    var name = $('.js-name');
-    var number = $('.js-number');
+    var nameBlock = $('.js-name');
+    var numberBlock = $('.js-number');
 
     name.focus(function(){
       this.style.borderBottom = '';
@@ -263,6 +259,5 @@ $(document).ready(function(){
   viewVideos();
   hoverLogo();
   createMap();
-  hoverItem();
   inputMask();
 });
