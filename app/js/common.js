@@ -230,6 +230,13 @@ $(function(){
       document.body.classList.remove('bg-color');
     });
 
+    $('.services .what-we-do .item').on('click', function(){
+      mainPopup.classList.add('main-popup--active');
+      fullPage.classList.add('fullpage');
+      document.body.classList.add('bg-color');
+      $('.main-header .button').hide();
+    });
+
   }
 
   function inputMask() {

@@ -681,6 +681,22 @@ a[href^="https://maps.google.com/maps"] {
   background-size: cover !important;
   background-position: center !important;
 
+  &-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'extrabold';
+    color: #292933;
+    margin-bottom: 18px;
+    line-height: 48px;
+    max-width: 560px;
+    position: relative;
+    top: -75px;
+
+    @include adaptive(mobile) {
+      display: none;
+    }
+  }
+
   &-wrapper {
     margin: 0 auto;
     max-width: 1200px;
@@ -734,6 +750,15 @@ a[href^="https://maps.google.com/maps"] {
     }
 
     &:nth-child(4) {
+      &:hover {
+        .title {
+          color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:nth-child(5) {
       &:hover {
         .title {
           color: #fff;
@@ -850,6 +875,10 @@ a[href^="https://maps.google.com/maps"] {
     background-position: center !important;
     background-size: cover !important;
 
+    .works-title {
+      color: #292933 !important;
+    }
+
     .works-item {
       .title {
         color: #292933 !important;
@@ -871,6 +900,10 @@ a[href^="https://maps.google.com/maps"] {
     background: url('../img/project_2.png') no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
+
+    .works-title {
+      color: #fff !important;
+    }
 
 
 
@@ -897,6 +930,10 @@ a[href^="https://maps.google.com/maps"] {
     background-position: center !important;
     background-size: cover !important;
 
+    .works-title {
+      color: #292933 !important;
+    }
+
     .works-item {
       .title {
         color: #292933 !important;
@@ -918,6 +955,10 @@ a[href^="https://maps.google.com/maps"] {
     background: url('../img/project_4.png') no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
+
+    .works-title {
+      color: #fff !important;
+    }
 
     .works-item {
       .title {
@@ -941,6 +982,11 @@ a[href^="https://maps.google.com/maps"] {
 .color_project {
 
   &_1 {
+
+    .works-title {
+      color: #292933;
+    }
+
     .works-item {
       .title {
         color: #292933;
@@ -961,6 +1007,10 @@ a[href^="https://maps.google.com/maps"] {
 
   &_2 {
 
+    .works-title {
+      color: #fff;
+    }
+
     .works-item {
       .title {
         color: #fff;
@@ -980,6 +1030,11 @@ a[href^="https://maps.google.com/maps"] {
   }
 
   &_3 {
+
+    .works-title {
+      color: #292933;
+    }
+
     .works-item {
       .title {
         color: #292933;
@@ -999,6 +1054,11 @@ a[href^="https://maps.google.com/maps"] {
   }
 
   &_4 {
+
+    .works-title {
+      color: #fff;
+    }
+
     .works-item {
       .title {
         color: #fff;

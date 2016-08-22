@@ -569,6 +569,19 @@ a[href^="https://maps.google.com/maps"] {
   background: url("../img/project_1.png") no-repeat;
   background-size: cover !important;
   background-position: center !important; }
+  .works-title {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'extrabold';
+    color: #292933;
+    margin-bottom: 18px;
+    line-height: 48px;
+    max-width: 560px;
+    position: relative;
+    top: -75px; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .works-title {
+        display: none; } }
   .works-wrapper {
     margin: 0 auto;
     max-width: 1200px; }
@@ -592,6 +605,9 @@ a[href^="https://maps.google.com/maps"] {
     .works-item:nth-child(3):hover .title {
       opacity: 1; }
     .works-item:nth-child(4):hover .title {
+      color: #fff;
+      opacity: 1; }
+    .works-item:nth-child(5):hover .title {
       color: #fff;
       opacity: 1; }
     .works-item__wrapper {
@@ -670,6 +686,8 @@ a[href^="https://maps.google.com/maps"] {
   background: url("../img/project_1.png") no-repeat !important;
   background-position: center !important;
   background-size: cover !important; }
+  .project_1 .works-title {
+    color: #292933 !important; }
   .project_1 .works-item .title {
     color: #292933 !important; }
   .project_1 .works-item .description {
@@ -683,6 +701,8 @@ a[href^="https://maps.google.com/maps"] {
   background: url("../img/project_2.png") no-repeat !important;
   background-position: center !important;
   background-size: cover !important; }
+  .project_2 .works-title {
+    color: #fff !important; }
   .project_2 .works-item .title {
     color: #fff !important; }
   .project_2 .works-item .description {
@@ -696,6 +716,8 @@ a[href^="https://maps.google.com/maps"] {
   background: url("../img/project_3.png") no-repeat !important;
   background-position: center !important;
   background-size: cover !important; }
+  .project_3 .works-title {
+    color: #292933 !important; }
   .project_3 .works-item .title {
     color: #292933 !important; }
   .project_3 .works-item .description {
@@ -709,6 +731,8 @@ a[href^="https://maps.google.com/maps"] {
   background: url("../img/project_4.png") no-repeat !important;
   background-position: center !important;
   background-size: cover !important; }
+  .project_4 .works-title {
+    color: #fff !important; }
   .project_4 .works-item .title {
     color: #fff !important; }
   .project_4 .works-item .description {
@@ -717,6 +741,9 @@ a[href^="https://maps.google.com/maps"] {
     color: #fff !important; }
   .project_4 .works-item .arrow {
     background: url("../img/arrow_right_w.svg") no-repeat !important; }
+
+.color_project_1 .works-title {
+  color: #292933; }
 
 .color_project_1 .works-item .title {
   color: #292933; }
@@ -730,6 +757,9 @@ a[href^="https://maps.google.com/maps"] {
 .color_project_1 .works-item .arrow {
   background: url("../img/arrow_right.svg") no-repeat; }
 
+.color_project_2 .works-title {
+  color: #fff; }
+
 .color_project_2 .works-item .title {
   color: #fff; }
 
@@ -742,6 +772,9 @@ a[href^="https://maps.google.com/maps"] {
 .color_project_2 .works-item .arrow {
   background: url("../img/arrow_right_w.svg") no-repeat; }
 
+.color_project_3 .works-title {
+  color: #292933; }
+
 .color_project_3 .works-item .title {
   color: #292933; }
 
@@ -753,6 +786,9 @@ a[href^="https://maps.google.com/maps"] {
 
 .color_project_3 .works-item .arrow {
   background: url("../img/arrow_right.svg") no-repeat; }
+
+.color_project_4 .works-title {
+  color: #fff; }
 
 .color_project_4 .works-item .title {
   color: #fff; }
